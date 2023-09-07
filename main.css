@@ -1,21 +1,20 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 /* HEADER */
 header {
     width: 90%;
     height: 75px;
     margin: 0 auto;
-    border: 2px solid skyblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .left-icons, header .right-icons {
-    width: 100px;
-    border: 1px solid black;
+    width: 130px;
     display: flex;
 }
 
@@ -25,26 +24,26 @@ header a:not(:last-child) {
 }
 
 header a img {
-    width: 35px;
+    width: 100%;
 }
 
 /* NAV */
 nav {
     width: 50%;
-    height: 250px;
     margin: 0 auto;
 }
 
+/* Search group */
 nav .search-group {
     width: 100%;
-    height: 50px;
-    border: 1px solid rgb(74, 217, 74);
-    border-radius: 20px;
+    height: 70px;
+    border: 1.2px solid rgb(27, 139, 27);
+    border-radius: 30px;
     display: flex;
 }
 
 nav .search-group:hover {
-    box-shadow: 0 1.5px 0 0 rgb(219, 210, 210);
+    box-shadow: 0 2px 0 0 rgb(219, 210, 210);
 }
 
 nav .search-group .link-icon{
@@ -72,13 +71,37 @@ nav .search-group .fieldset > input {
     height: 95%;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 27px;
+}
+nav .search-group .fieldset > input::placeholder {
+    opacity: 0.6;
 }
 
 nav .search-group .fieldset button {
     width: 10%;
     height: inherit;
     display: none;
+}
+
+nav .sub-icons {
+    height: 75px;
+    background-color: orange;
+    display: flex;
+    margin-top: 20px;
+}
+
+nav .sub-icons > .icon-box {
+    width: 100%;
+    height: 75px;
+    border: 2px dashed green;
+    display: flex;
+    justify-content: center;
+}
+
+nav .sub-icons > .icon-box span{
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /* SECTION */
