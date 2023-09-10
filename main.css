@@ -36,7 +36,7 @@ nav {
 /* Search group */
 nav .search-group {
     width: 100%;
-    height: 70px;
+    margin-bottom: 30px;
     border: 1.2px solid rgb(27, 139, 27);
     border-radius: 30px;
     display: flex;
@@ -48,18 +48,15 @@ nav .search-group:hover {
 
 nav .search-group .link-icon{
     width: 10%;
-    height: inherit;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 nav .search-group .link-icon img{
-    width: 70%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 3px;
+    width: 40px;
 }
+
 nav .search-group .fieldset {
     width: 90%;
     height: inherit;
@@ -68,10 +65,10 @@ nav .search-group .fieldset {
 
 nav .search-group .fieldset > input {
     width: 80%;
-    height: 95%;
+    height: 60px;
     border: none;
     outline: none;
-    font-size: 27px;
+    font-size: 25px;
 }
 nav .search-group .fieldset > input::placeholder {
     opacity: 0.6;
@@ -84,32 +81,46 @@ nav .search-group .fieldset button {
 }
 
 nav .sub-icons {
-    height: 75px;
-    background-color: orange;
+    width: 100%;
     display: flex;
-    margin-top: 20px;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 
 nav .sub-icons > .icon-box {
-    width: 100%;
-    height: 75px;
-    border: 2px dashed green;
+    width: 55px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* 미디어 쿼리를 활용하여 스크린 확대시 레이아웃 깨짐 방지할 것.  */
 nav .sub-icons > .icon-box span{
     color: #333;
     font-size: 20px;
     font-weight: 500;
 }
 
+nav .sub-icons > .icon-box a img {
+    width: 100%;
+}
+
 /* SECTION */
- section {
+main {
     width: 90%;
-    height: 1200px;
+    height: 1000px;
+    background-color: beige;
     margin: 0 auto;
-    border: 2px dashed orange;
+    display: flex;
+} 
+section {
+    width: 70%;
+    height: 500px;
+    border: 3px solid orange;
  }
 
- 
+ aside {
+    width: 30%;
+    height: 500px;
+    border: 3px solid green;
+ }
