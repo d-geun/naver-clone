@@ -1,126 +1,157 @@
-body {
+body{
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+}
+
+
+/* css 변수를 활용하여 text or bg-color 결정  */
+:root {
+    --color_title: #080808;
+    --color_title_rgb: 8,8,8;
+    --color_body: #101010;
+    --color_body_rgb: 16,16,16;
+    --color_caption1: #404040;
+    --color_caption1_rgb: 64,64,64;
+    --color_caption2: #606060;
+    --color_caption2_rgb: 96,96,96;
+    --color_search: #000;
+    --color_search_rgb: 0,0,0;
+    --color_border_out: #e3e5e8;
+    --color_border_out_rgb: 227,229,232;
+    --color_border_in: #ebebeb;
+    --color_border_in_rgb: 235,235,235;
+    --color_border_in_divider: #ebebeb;
+    --color_border_in_divider_rgb: 235,235,235;
+    --color_border_in_exception: #ebebeb;
+    --color_border_in_exception_rgb: 235,235,235;
+    --color_button_border: #dadcdf;
+    --color_button_border_rgb: 218,220,223;
+    --color_dot_divider: #d3d5d7;
+    --color_dot_divider_rgb: 211,213,215;
+    --color_block_bg: #fff;
+    --color_block_bg_rgb: 255,255,255;
+    --color_board_bg: #f4f6fa;
+    --color_board_bg_rgb: 244,246,250;
+    --color_option_bg: #f5f7f8;
+    --color_option_bg_rgb: 245,247,248;
+    --color_login_bg: #fafbfb;
+    --color_login_bg_rgb: 250,251,251;
+    --color_menu_widget_bg: #fff;
+    --color_menu_widget_bg_rgb: 255,255,255;
+    --color_setting_bg: #fff;
+    --color_setting_bg_rgb: 255,255,255;
+    --color_button1_bg: #fff;
+    --color_button1_bg_rgb: 255,255,255;
+    --color_button2_bg: #fff;
+    --color_button2_bg_rgb: 255,255,255;
+    --color_news: #3a67ea;
+    --color_news_rgb: 58,103,234;
+    --color_news_econ_stay: #909aab;
+    --color_news_econ_stay_rgb: 144,154,171;
+    --color_news_econ_down: #4f67d6;
+    --color_news_econ_down_rgb: 79,103,214;
+    --color_live_news_price: #f4361e;
+    --color_live_news_price_rgb: 244,54,30;
+    --color_enter: #e538e2;
+    --color_enter_rgb: 229,56,226;
+    --color_enter_bg: #f2f1fb;
+    --color_enter_bg_rgb: 242,241,251;
+    --color_sports: #1f65ef;
+    --color_sports_rgb: 31,101,239;
+    --color_sports_bg: #f4f7fe;
+    --color_sports_bg_rgb: 244,247,254;
+    --color_econ: #008f76;
+    --color_econ_rgb: 0,143,118;
+    --color_calendar: #eb5b5b;
+    --color_calendar_rgb: 235,91,91;
+    --color_dic: #031f5f;
+    --color_dic_rgb: 3,31,95;
+}
+
+.wrap-center{
+    max-width: 1280px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding-top: 18px;
 }
 /* HEADER */
 header {
-    width: 90%;
-    height: 75px;
-    margin: 0 auto;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-header .left-icons, header .right-icons {
-    width: 130px;
+header, .header-left, .header-right, .header-wrapper{
     display: flex;
 }
 
-
-header a:not(:last-child) {
-    margin-right: 20px;
-}
-
-header a img {
-    width: 100%;
-}
-
-/* NAV */
-nav {
-    width: 50%;
-    margin: 0 auto;
-}
-
-/* Search group */
-nav .search-group {
-    width: 100%;
-    margin-bottom: 30px;
-    border: 1.2px solid rgb(27, 139, 27);
-    border-radius: 30px;
-    display: flex;
-}
-
-nav .search-group:hover {
-    box-shadow: 0 2px 0 0 rgb(219, 210, 210);
-}
-
-nav .search-group .link-icon{
-    width: 10%;
-    display: flex;
+.header-wrapper {
+    width: 46px;
+    height: 46px;
     justify-content: center;
     align-items: center;
 }
 
-nav .search-group .link-icon img{
-    width: 40px;
+.header-wrapper:hover {
+    background-color: var(--color_option_bg);
+    border-radius: 50%;
 }
 
-nav .search-group .fieldset {
-    width: 90%;
-    height: inherit;
-    display: flex;
+.header-hamburger, .header-pay, .header-talk, .header-notice {
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: 435px 423px;
+    cursor: pointer;
+    background-image: url(./sp_main.png);
 }
 
-nav .search-group .fieldset > input {
-    width: 80%;
+.header-hamburger {
+    background-position: -82px -329px;
+}
+
+.header-pay {
+    width: 32px;
+    height: 32px;
+    background-position: -295px -177px;
+}
+
+.header-talk {
+    background-position: -190px -329px;
+}
+
+.header-notice {
+    background-position: -136px -329px;
+}
+
+/* SEARCH */
+
+.search-group {   
+    width: 708px;
     height: 60px;
+    display: inline-block;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+    text-align: left;
+}
+    
+.search-group > .search-svg {
+    display: inline-block;
+    width: 68px;
+    margin-right: 12px;
+    height: 100%;
+    padding-left: 12px;
+}
+
+.search-group > input {
+    width: 480px;
+    height: 58px;
     border: none;
     outline: none;
-    font-size: 25px;
-}
-nav .search-group .fieldset > input::placeholder {
-    opacity: 0.6;
-}
-
-nav .search-group .fieldset button {
-    width: 10%;
-    height: inherit;
-    display: none;
+    padding: 17px 0;
+    box-sizing: border-box;
+    
 }
 
-nav .sub-icons {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-}
-
-nav .sub-icons > .icon-box {
-    width: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 미디어 쿼리를 활용하여 스크린 확대시 레이아웃 깨짐 방지할 것.  */
-nav .sub-icons > .icon-box span{
-    color: #333;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-nav .sub-icons > .icon-box a img {
-    width: 100%;
-}
-
-/* SECTION */
-main {
-    width: 90%;
+.main {
     height: 1000px;
-    background-color: beige;
-    margin: 0 auto;
-    display: flex;
-} 
-section {
-    width: 70%;
-    height: 500px;
-    border: 3px solid orange;
- }
-
- aside {
-    width: 30%;
-    height: 500px;
-    border: 3px solid green;
- }
+}
+    

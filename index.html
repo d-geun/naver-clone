@@ -1,118 +1,57 @@
 <!DOCTYPE html>
-<html lang=https://siape.veta.naver.com/rd?rk=bVwYU4o5LGrmuSGo4m8vTA&eltts=%2BJClZq96X%2FG3so%2BvBP3NZQ%3D%3D&elu=9D0429E3B37861E6BA3BD1A79F977B36DD926C2AF301BD1190619B6F53B777A43D5ED0BC698E1738E366803EB8A8A29F8052AACE2CFC3588B9B6F56ADB12F3F9192C980F8BBBA6EE4138736079605F1B&tr=ndptb"ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./main.css">
     <title>NAVER</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="left-icons">
-            <a href="/">
-                <img src="./hamburger-icon.png" alt="">
-            </a>
-            <a href="/">
-                <img src="./pay-icon.png" alt="">
-            </a>
-        </div>
-
-        <div class="right-icons">
-            <a href="/">
-                <img src="./talk-icon.png" alt="">
-            </a>
-            <a href="/">
-                <img src="./alarm-icon.png" alt="">
-            </a>
-        </div>
-    </header>
-
-    <nav>
-        <div class="search-group">
-            <div class="link-icon">
-                <a href="/">
-                    <img src="./naver-icon.png" alt="null">
-                </a>
-            </div>
-            <div class="fieldset">
-                <input type="type" placeholder="검색어를 입력하세요.">
-                <button class="kbd-search"></button>
-                <button class="history-search"></button>
-                <button class="search-icon"></button>
-            </div>
-
-        </div>
-        
-        <div class="sub-icons">
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/mail.logo.png" alt="">
-                </a>
-                <span>메일</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/cafe.logo.png" alt="">
-                </a>
-                <span>카페</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/blog.logo.png" alt="">
-                </a>
-                <span>블로그</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/shopping.logo.png" alt="">
-                </a>
-                <span>쇼핑</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/news.logo.png" alt="">
-                </a>
-                <span>뉴스</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/stock.logo.png" alt="">
-                </a>
-                <span>증권</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/realty.logo.png" alt="">
-                </a>
-                <span>부동산</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/map.logo.png" alt="">
-                </a>
-                <span>지도</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="./section/toon.logo.png" alt="">
-                </a>
-                <span>웹툰</span>
-            </div>
-            <div class="icon-box">
-                <a href="/">
-                    <img src="" alt="">
-                </a>
+    <div class="wrap">
+        <div class="wrap-center">
+            
+            <header>
+                <div class="header-left">
+                    <div class="header-wrapper">
+                        <div class="header-hamburger"></div>
+                    </div>
+                    <div class="header-wrapper">
+                        <div class="header-pay"></div>
+                    </div>
+                </div>
                 
+                <div class="header-right">
+                    <div class="header-wrapper">
+                        <div class="header-talk"></div>
+                    </div>
+                    <div class="header-wrapper">
+                        <div class="header-notice"></div>
+                    </div>   
+                </div>
+            </header>
+                
+            
+            <!-- form의 역할 input에서 enter입력시 자동으로 검색창으로 넘어가게함 -->
+            <div class="search">
+                <div class="search-group">
+                    <a class="search-svg"href="#">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+                    </a>
+                    <label for="serach-input"></label>
+                    <input class="serach-input" type="text" placeholder="검색어를 입력하세요." />
+                    
+                    <div class="search-right">
+                        <button class="search-keyboard"></button>
+                        <button class="search-recent"></button>
+                        <button class="search-btn"></button>
+                    </div>
+                </div>
             </div>
+            <div class="nav"></div>
+            <div class="main"></div>
         </div>
-    </nav>
-
-    <main>
-        <section></section>
-        <aside></aside>
-    </main>
-
-    
+    </div>
 </body>
 </html>
+            
