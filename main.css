@@ -1,8 +1,14 @@
 body{
     margin: 0;
     box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;;
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
+*{
+    box-sizing: border-box;
+}
 
 /* css 변수를 활용하여 text or bg-color 결정  */
 :root {
@@ -67,34 +73,31 @@ body{
     --color_dic: #031f5f;
     --color_dic_rgb: 3,31,95;
 }
-
+@media(min-width: 1000px){
 .wrap-center{
-    max-width: 1280px;
+    width: 1200px;
     border: 1px solid black;
     margin: 0 auto;
     padding-top: 18px;
+}
 }
 /* HEADER */
 header {
     justify-content: space-between;
 }
-
 header, .header-left, .header-right, .header-wrapper{
     display: flex;
 }
-
 .header-wrapper {
     width: 46px;
     height: 46px;
     justify-content: center;
     align-items: center;
 }
-
 .header-wrapper:hover {
     background-color: var(--color_option_bg);
     border-radius: 50%;
 }
-
 .header-hamburger, .header-pay, .header-talk, .header-notice {
     width: 26px;
     height: 26px;
@@ -103,55 +106,181 @@ header, .header-left, .header-right, .header-wrapper{
     cursor: pointer;
     background-image: url(./sp_main.png);
 }
-
 .header-hamburger {
     background-position: -82px -329px;
 }
-
 .header-pay {
     width: 32px;
     height: 32px;
     background-position: -295px -177px;
 }
-
 .header-talk {
     background-position: -190px -329px;
 }
-
 .header-notice {
     background-position: -136px -329px;
 }
 
 /* SEARCH */
-
+.search {
+    display: flex;
+    justify-content: center;
+}
 .search-group {   
     width: 708px;
     height: 60px;
-    display: inline-block;
+    display: flex;
+    /* width값을 100% 차지하고 싶지 않을 때 inline-flex */
     border: 1px solid #03c75a;
     border-radius: 33px;
     text-align: left;
 }
-    
+.search-group:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0, .12);
+}  
 .search-group > .search-svg {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 68px;
     margin-right: 12px;
     height: 100%;
     padding-left: 12px;
+    position: relative;
 }
-
+.search-group > .search-svg::after {
+    display: none;
+}
+.search-group:focus-within > .search-svg::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #e4e4e4;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.search-group > .search-svg svg{
+    width: 24px;
+    height: 24px;
+    fill: #03c75a;
+}
 .search-group > input {
     width: 480px;
     height: 58px;
     border: none;
     outline: none;
     padding: 17px 0;
-    box-sizing: border-box;
-    
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.search-group > input::placeholder {
+    color: white;
+}
+.search-group > input:focus::placeholder {
+    color: rgb(230,230,230);
+}
+.search-right {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end; 
+}
+.search-keyboard, .search-recent, .search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.search-btn {
+    padding:  17px 27px 16px 10px;
+}
+.search-right .search-keyboard::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.31e4f450.png);
+    background-size: 435px 423px;
+    background-position: -91px -308px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 16px;
+}
+.search-right .search-keyboard:hover::before {
+    filter: brightness(0.7);
+}
+.search-right .search-recent::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.31e4f450.png);
+    background-size: 435px 423px;
+    background-position: -318px -247px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 6px;
+}
+.search-right .search-btn::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.31e4f450.png);
+    background-size: 435px 423px;
+    background-position: -295px -329px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
 }
 
+nav > ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 20px;
+} 
+nav a {
+    text-decoration: none;
+    text-align: center;
+}
+nav a div{
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+}
+nav a div::after {
+    content: "";
+    display: inline-block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.31e4f450.png);
+    background-size: 422px 405px;
+    background-position: -250px -90px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 44px;
+}
+nav a:visited {
+    color : #333;
+}
+nav li {
+    width: 64px;
+    margin-left: 4px;
+    text-align: center;
+}
+nav li:nth-of-type(1) {
+    margin-left: 0;
+}
+nav li:nth-of-type(2) a div::after {
+    background-position: -250px 0px;
+}
+nav li:nth-of-type(3) a div::after{
+    background-position: -201px -98px;
+}
+nav li:nth-of-type(4) a div::after{
+    background-position: -250px 180px;
+}
+nav li:nth-of-type(5) a div::after{
+    background-position: -250px 270px;
+}
+nav li:nth-of-type(6) a div::after{
+    background-position: -250px 360px;
+}
 .main {
     height: 1000px;
 }
-    
