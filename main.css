@@ -19,13 +19,20 @@ li {
 p {
     display: inline;
 }
+button {
+    background: none;
+}
 a {
  text-decoration: none;
  color: black;
 }
-
 a:hover {
     text-decoration: underline;
+}
+.sub-viewer{
+padding: 12px 20px;
+background-color: var(--color_option_bg);
+border-radius: 5px;
 }
 /* css 변수를 활용하여 text or bg-color 결정  */
 :root {
@@ -357,7 +364,7 @@ main {
     width: 420px;
     border-radius: 8px;
 }
-.main-left-ad, .news-stand,
+.main-left-ad, .news-stand, .main-shopping,
 .main-login, .main-right-ad, .weather, .stock {
     box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
     border-radius: 8px;
@@ -377,9 +384,6 @@ main {
     background-image: url(./ad/right-ad.png);
     background-size: cover;
     cursor: pointer;
-}
-.news-stand {
-    height: 426px;
 }
 .main-login {
     height: 164px;
@@ -455,7 +459,7 @@ main {
 .weather .weather-header a:first-of-type {
     padding-right: 10px;
 }
-/*  */
+
 .weather .weather-header a:last-of-type {
     border: 1px solid var(--color_border_in_divider);
     border-radius: 10px;
@@ -524,11 +528,13 @@ main {
 }
 
 .main-left .news-stand {
-    padding: 15px;
+    padding-top: 15px;
 }
 
 .main-left .news-stand ul{
     display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .main-left .news-stand ul > li > a{ 
@@ -545,19 +551,14 @@ main {
     font-weight: 500;
 }
 
-.main-left .news-stand .news-sub-viewer {
-    width: 790px;
-    height: 50px;
-    padding: 12px 20px;
-    margin-top: 20px;   
-    background-color: var(--color_option_bg);
-    border-radius: 5px;
+.main-left .news-stand .sub-viewer {
+    margin: 20px;   
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
 }
-.main-left .news-stand .news-sub-viewer .news-select-btn::after {
+.main-left .news-stand .sub-viewer .news-select-btn::after {
     content: "";
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.83cec6a7.png);
     background-size: 435px 414px;
@@ -570,16 +571,16 @@ main {
     vertical-align: top;
     cursor: pointer;
 }
-.main-left .news-stand .news-sub-viewer .selected-news {
+.main-left .news-stand .sub-viewer .selected-news {
     display: flex;
 }
-.main-left .news-stand .news-sub-viewer .selected-news > a {
+.main-left .news-stand .sub-viewer .selected-news > a {
     position: relative;
     padding-right: 10px;
     padding-left: 40px;
     margin-right: 5px;
 }
-.main-left .news-stand .news-sub-viewer .selected-news > a::after {
+.main-left .news-stand .sub-viewer .selected-news > a::after {
     content: "";
     width: 4px;
     height: 4px;
@@ -591,7 +592,7 @@ main {
     right: 0;
 }
 
-.main-left .news-stand .news-sub-viewer .selected-news > a::before {
+.main-left .news-stand .sub-viewer .selected-news > a::before {
     content: "";
     width: 1px;
     height: 16px;
@@ -601,14 +602,16 @@ main {
     left: 0;
 }
 
-.main-left .news-stand .news-sub-viewer .news-home-link{
+.main-left .news-stand .sub-viewer .news-home-link{
     font-weight: 700;
 }
 
 .main-left .news-subscript {
     border: 1px solid var(--color_border_in);
     border-radius: 4px;
-    margin: 18px 20px 0 0;
+    margin: 20px;
+    display: block;
+    
 }
 
 .main-left .news-subscript .subscript-wrapper {
@@ -625,4 +628,151 @@ main {
 }
 .main-left .news-subscript .subscript-wrapper .subscript-box a img{
     height: 20px;
+}
+
+.news-nav {
+    border-top: 1px solid #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container div{
+    padding: 0 10px;
+}
+.nav-container .nav-bar {
+    width: 22.5px;
+    height: 22.5px;
+    border: 1px solid #e4e4e4;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.nav-container .nav-bar span{
+    font-size: 12px;
+}
+
+.nav-container .nav-bar:first-of-type span {
+    margin-left: 4px;
+}
+.nav-container p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-container p:first-of-type{
+    color: blue;
+}
+    
+.main-shopping {
+    margin-top: 10px;
+    padding: 20px;
+}
+.main-shopping .shopping-header {
+    padding: 20px;
+}
+.main-shopping .shopping-header ul{
+    display: flex;
+    align-items: center;
+}
+
+.main-shopping .shopping-header ul li:not(:last-of-type){
+    margin-right: 10px;
+}
+
+.main-shopping .shopping-header ul li a p {
+    font-size: 1.1rem;
+}
+
+.main-shopping .shopping-header ul li:first-of-type a p {
+    font-weight: 700;
+}
+
+.main-shopping .shopping-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-shopping .sub-viewer {
+    width: 668px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.main-shopping .sub-viewer .TodayPick{
+    display: flex;
+}
+
+.main-shopping .sub-viewer .TodayPick > .TodayPick-title{
+    padding-right: 15px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.main-shopping .sub-viewer .TodayPick .TodayPick-link {
+    display: inline-flex;
+}
+
+.main-shopping .sub-viewer .TodayPick .TodayPick-link a img{
+    vertical-align: middle;
+    height: 16px;
+}
+
+.main-shopping .sub-viewer .TodayPick .TodayPick-link a span:first-of-type {
+    padding-left: 15px;
+}
+
+.main-shopping .sub-viewer .TodayPick .TodayPick-link a span:last-of-type {
+    color: darkgreen;
+}
+
+.shopping-section .navigator {
+    padding-top: 10px;
+    display: flex;
+    align-self: center;
+}
+
+.shopping-section .navigator button {
+    border: 1px solid #e4e4e4;
+    padding: 5px;
+}
+.shopping-section .navigator button.prev-btn {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.shopping-section .navigator button.next-btn {
+    border-radius: 0 4px 4px 0;
+}
+.shopping-section .navigator button.prev-btn::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6519c842.png);
+    background-size: 435px 414px;
+    background-position: -35px -402px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 12px;
+    margin: auto;
+    transform: rotateY(180deg);
+}
+.shopping-section .navigator button.next-btn::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6519c842.png);
+    background-size: 435px 414px;
+    background-position: -35px -402px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 12px;
+    margin: auto;
 }
